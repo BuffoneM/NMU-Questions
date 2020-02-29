@@ -1,23 +1,20 @@
 def flip(a, b):
     for i in range(a, b + 1):
-        if (coins[i] == 1):
-            coins[i] = 0
-        else:
-            coins[i] = 1
+        coins[i] = not coins[i]
 
 
 def heads(a, b):
     temp = coins[a:b + 1]
-    return temp.count(1)
+    return temp.count(True)
 
 
-file = open('q2.in')
+file = open('Question_2\\q2.in')
 string = file.read().replace('\n', ' ').split(' ')
 
 num_coins = int(string.pop(0))
 lines = int(string.pop(0))
 
-coins = [0] * num_coins
+coins = [False] * num_coins
 
 while (string):
     # print(coins)
