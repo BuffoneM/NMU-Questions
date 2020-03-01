@@ -2,13 +2,11 @@ def flip(a, b):
     for i in range(a, b + 1):
         coins[i] = not coins[i]
 
-
 def heads(a, b):
     temp = coins[a:b + 1]
     return temp.count(True)
 
-
-file = open('Question_2\\q2.in')
+file = open('q2.in')
 string = file.read().replace('\n', ' ').split(' ')
 
 num_coins = int(string.pop(0))
